@@ -1,95 +1,423 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Moulika Cooking Oil</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moulika Coconest – Cold-Pressed Coconut & Groundnut Oils</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-green': '#059669', // Emerald Green (Nature/Health)
+                        'secondary-brown': '#78350F', // Dark Brown (Traditional/Ghani)
+                        'accent-yellow': '#FBBF24', // Amber (Oil/Energy)
+                        'bg-light': '#F8FAF5', // Off-White/Light Green Background
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'oil-texture': "url('https://placehold.co/1200x600/FBBF24/78350F?text=Pure+Oil')",
+                        'coconut-ghani': "url('https://placehold.co/1200x600/4ade80/ffffff?text=Traditional+Wooden+Ghani+Extraction')"
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles for aesthetic enhancements */
+        .shadow-ghani {
+            box-shadow: 0 10px 15px -3px rgba(120, 53, 15, 0.1), 0 4px 6px -2px rgba(120, 53, 15, 0.05);
+        }
+        .text-shadow-light {
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
-<body>
-  <!-- Navbar -->
-<header class="navbar">
-  <div class="logo">Moulika</div>
-  <nav>
-    <ul class="nav-links">
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <div class="hamburger">☰</div>
-  </nav>
-</header>
+<body class="bg-bg-light text-gray-800 font-sans">
 
-
-  <!-- Hero Section -->
-  <section class="hero reveal">
-    <div class="hero-text">
-      <h1>From Nature <br> To Your Kitchen.</h1>
-      <p>Pure natural cooking oil rich in heart-healthy nutrients, full-bodied flavor, and perfect for everyday cooking without additives.</p>
-    </div>
-  </section>
-
-  <!-- Best Selling Section -->
-    <section class="best-selling reveal" id="shop">
-    <h2>Best selling</h2>
-
-    <div class="products">
-      <div class="product-card reveal">
-        <img src="Gemini_Generated_Image_7rdde87rdde87rdd.png" alt="Coconut Oil 300ml">
-        <h3>Pure • Cold-Pressed • Coconut oil 300ml</h3>
-        <div class="price-rating">
-          <span class="price">₹150</span>
-          <a href="https://wa.me/918088103001?text=I want this Pure • Cold-Pressed • Rich Aroma 300ml"
-            class="order-btn">Order Now</a>
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
+            <a href="#" class="text-2xl font-bold text-primary-green tracking-tight">Moulika Coconest</a>
+            <nav class="hidden md:flex space-x-8 text-lg font-medium">
+                <a href="#products" class="hover:text-primary-green transition duration-150">Products</a>
+                <a href="#mission" class="hover:text-primary-green transition duration-150">Mission</a>
+                <a href="#why-us" class="hover:text-primary-green transition duration-150">Why Us</a>
+                <a href="#about-us" class="hover:text-primary-green transition duration-150">About</a>
+                <a href="#contact" class="hover:text-primary-green transition duration-150">Contact</a>
+            </nav>
+            <a href="https://wa.me/918088103001" target="_blank" class="md:hidden p-2 rounded-full bg-primary-green text-white hover:bg-green-700 transition duration-150" aria-label="Order on WhatsApp">
+                <i data-lucide="message-square-text"></i>
+            </a>
         </div>
-      </div>
+    </header>
 
-      <div class="product-card reveal">
-        <img src="Gemini_Generated_Image_7rdde87rdde87rdd.png" alt="Coconut Oil 1000ml">
-        <h3>Pure • Cold-Pressed • Coconutoil 1000ml</h3>
-        <div class="price-rating">
-          <span class="price">₹470</span>
-          <a href="https://wa.me/918088103001?text=I want this Pure • Cold-Pressed • Rich Aroma 1000ml"
-            class="order-btn">Order Now</a>
+    <!-- Hero Section -->
+    <section id="hero" class="relative overflow-hidden bg-primary-green text-white py-16 sm:py-24 lg:py-32">
+        <!-- Background Pattern/Image -->
+        <div class="absolute inset-0 bg-cover bg-center opacity-10" style="background-image: url('https://placehold.co/1200x600/ffffff/059669?text=Leaf+Pattern');"></div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 text-shadow-light">
+                100% Cold-Pressed Coconut & Groundnut Oils – Pure, Unrefined, Natural
+            </h1>
+            <p class="text-xl sm:text-2xl lg:text-3xl font-light mb-10 opacity-90">
+                From our farms to your kitchen – no chemicals, no compromise.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <!-- Shop Now Button -->
+                <a href="#products" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-medium rounded-xl shadow-ghani text-primary-green bg-accent-yellow hover:bg-yellow-400 transition duration-300 transform hover:scale-[1.02]">
+                    <i data-lucide="shopping-cart" class="w-5 h-5 mr-3"></i>
+                    🛒 Shop Now
+                </a>
+                <!-- WhatsApp Button -->
+                <a href="https://wa.me/918088103001" target="_blank" class="inline-flex items-center justify-center px-8 py-4 border border-white text-lg font-medium rounded-xl shadow-ghani text-white bg-transparent hover:bg-white hover:text-primary-green transition duration-300 transform hover:scale-[1.02]">
+                    <i data-lucide="message-square-text" class="w-5 h-5 mr-3"></i>
+                    💬 Order on WhatsApp
+                </a>
+            </div>
         </div>
-      </div>
+    </section>
 
-      <div class="product-card reveal">
-        <img src="Gemini_Generated_Image_7rdde87rdde87rdd.png" alt="Coconut Oil 500ml">
-        <h3>Pure • Cold-Pressed • Coconut Oil 500ml</h3>
-        <div class="price-rating">
-          <span class="price">₹250</span>
-          <a href="https://wa.me/918088103001?text=I want this Pure • Cold-Pressed • Rich Aroma 500ml"
-            class="order-btn">Order Now</a>
+    <!-- Our Products Section -->
+    <section id="products" class="py-10 sm:py-14 lg:py-22">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-secondary-brown mb-6">Our Products</h2>
+
+            <div class="max-w-3xl mx-auto text-center mb-8">
+                <p class="text-xl text-gray-600">Discover our range of premium cold-pressed oils, available in convenient sizes:</p>
+            </div>
+
+            <!-- Product Grid: 3 columns on large screens, 2 on tablet, 1 on mobile -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+
+                <!-- Coconut Oil Group Header (Spans all columns on large screens) -->
+                <div class="lg:col-span-3 text-center mb-4">
+                    <h3 class="text-3xl font-bold text-primary-green mb-6 border-b-2 border-primary-green/50 pb-2 inline-block">Cold-Pressed Coconut Oil</h3>
+                </div>
+
+                <!-- Product 1: Coconut 500ml -->
+                <div class="bg-white p-6 rounded-2xl shadow-ghani hover:shadow-xl transition duration-300 border-t-4 border-primary-green flex flex-col">
+                    <img class="w-full h-70 object-cover rounded-lg mb-4" src="Gemini_Generated_Image_7rdde87rdde87rdd (1).png" alt="Coconut Oil 500ml">
+                    <h4 class="text-xl font-semibold text-gray-900">Pure Cold pressed coconut oil</h4>
+                    <p class="text-primary-green font-bold text-2xl mt-1 mb-3">₹250 <span class="text-base text-gray-500 font-normal">/ 500 ml</span></p>
+                    <p class="text-gray-600 text-sm mb-4">Aromatic and nutrient-rich—perfect for small kitchens and occasional use.</p>
+                    <a href="https://wa.me/918088103001?text=I want this Pure Cold pressed coconut oil 500ml" target="_blank" class="mt-auto block w-full text-center px-4 py-2 bg-primary-green text-white rounded-lg hover:bg-green-700 transition duration-300">Shop Now</a>
+                </div>
+
+                <!-- Product 2: Coconut 1 Litre -->
+                <div class="bg-white p-6 rounded-2xl shadow-ghani hover:shadow-xl transition duration-300 border-t-4 border-primary-green flex flex-col">
+                    <img class="w-full h-70 object-cover rounded-lg mb-4" src="Gemini_Generated_Image_7rdde87rdde87rdd (1).png" alt="Coconut Oil 1 Litre">
+                    <h4 class="text-xl font-semibold text-gray-900">Pure Cold pressed coconut oil</h4>
+                    <p class="text-primary-green font-bold text-2xl mt-1 mb-3">₹470 <span class="text-base text-gray-500 font-normal">/ 1 Litre</span></p>
+                    <p class="text-gray-600 text-sm mb-4">Our most popular size for daily cooking, oil-pulling, and hair care.</p>
+                    <a href="https://wa.me/918088103001?text=I want this Pure Cold pressed coconut oil 1liter" target="_blank" class="mt-auto block w-full text-center px-4 py-2 bg-primary-green text-white rounded-lg hover:bg-green-700 transition duration-300">Shop Now</a>
+                </div>
+
+                <!-- Product 3: Coconut 2 Litre -->
+                <div class="bg-white p-6 rounded-2xl shadow-ghani hover:shadow-xl transition duration-300 border-t-4 border-primary-green flex flex-col">
+                    <img class="w-full h-70 object-cover rounded-lg mb-4" src="Gemini_Generated_Image_7rdde87rdde87rdd (1).png" alt="Coconut Oil 2 Litre">
+                    <h4 class="text-xl font-semibold text-gray-900">Pure Cold pressed coconut oil</h4>
+                    <p class="text-primary-green font-bold text-2xl mt-1 mb-3">₹150 <span class="text-base text-gray-500 font-normal">/ 300 ml</span></p>
+                    <p class="text-gray-600 text-sm mb-4">Value pack for large families or bulk buyers. Get the best savings!</p>
+                    <a href="https://wa.me/918088103001?text=I want this Pure Cold pressed coconut oil 300ml" target="_blank" class="mt-auto block w-full text-center px-4 py-2 bg-primary-green text-white rounded-lg hover:bg-green-700 transition duration-300">Shop Now</a>
+                </div>
+
+                <!-- Groundnut Oil Group Header -->
+                <div class="lg:col-span-3 pt-8 text-center mb-4">
+                    <h3 class="text-3xl font-bold text-secondary-brown mb-6 border-b-2 border-secondary-brown/50 pb-2 inline-block">Cold-Pressed Groundnut Oil</h3>
+                </div>
+
+                
+
+                <!-- Product 4: Groundnut 500ml -->
+                <div class="bg-white p-6 rounded-2xl shadow-ghani hover:shadow-xl transition duration-300 border-t-4 border-secondary-brown flex flex-col">
+                    <img class="w-full h-70 object-cover rounded-lg mb-4" src="ChatGPT Image Oct 27, 2025, 10_08_18 PM.png" alt="Groundnut Oil 500ml">
+                    <h4 class="text-xl font-semibold text-gray-900">un refined heart healthy groundnut oil</h4>
+                    <p class="text-secondary-brown font-bold text-2xl mt-1 mb-3">₹140 <span class="text-base text-gray-500 font-normal">/ 500 ml</span></p>
+                    <p class="text-gray-600 text-sm mb-4">Natural flavor for daily frying and seasoning, perfect trial size.</p>
+                    <a href="https://wa.me/918088103001?text=I want this un refined heart healthy groundnut oil 500ml" target="_blank" class="mt-auto block w-full text-center px-4 py-2 bg-secondary-brown text-white rounded-lg hover:bg-amber-700 transition duration-300">Shop Now</a>
+                </div>
+
+                <!-- Product 5: Groundnut 1 Litre -->
+                <div class="bg-white p-6 rounded-2xl shadow-ghani hover:shadow-xl transition duration-300 border-t-4 border-secondary-brown flex flex-col">
+                    <img class="w-full h-70 object-cover rounded-lg mb-4" src="ChatGPT Image Oct 27, 2025, 10_08_18 PM.png" alt="Groundnut Oil 1 Litre">
+                    <h4 class="text-xl font-semibold text-gray-900">un refined heart healthy groundnut oil</h4>
+                    <p class="text-secondary-brown font-bold text-2xl mt-1 mb-3">₹270 <span class="text-base text-gray-500 font-normal">/ 1 Litre</span></p>
+                    <p class="text-gray-600 text-sm mb-4">The essential size for regular use in traditional Indian recipes.</p>
+                    <a href="https://wa.me/918088103001?text=I want this un refined heart healthy groundnut oil 1liter" target="_blank" class="mt-auto block w-full text-center px-4 py-2 bg-secondary-brown text-white rounded-lg hover:bg-amber-700 transition duration-300">Shop Now</a>
+                </div>
+
+                
+            </div>
+            
+            <!-- Commitment to Purity - Kept below the main product list -->
+            <div class="mt-16 bg-primary-green/10 p-8 rounded-xl max-w-4xl mx-auto">
+                <h4 class="text-2xl font-bold text-primary-green mb-4 text-center">Commitment to Purity</h4>
+                <ul class="space-y-3 text-lg text-gray-700">
+                    <li class="flex items-start">
+                        <i data-lucide="check-circle" class="w-6 h-6 text-primary-green flex-shrink-0 mr-3 mt-1"></i>
+                        <span>Extracted using traditional wooden Ghani methods</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-lucide="check-circle" class="w-6 h-6 text-primary-green flex-shrink-0 mr-3 mt-1"></i>
+                        <span>Free from chemicals and preservatives</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-lucide="check-circle" class="w-6 h-6 text-primary-green flex-shrink-0 mr-3 mt-1"></i>
+                        <span>Freshly packed in hygienic, tamper-proof bottles</span>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
+    </section>
 
-      <div class="product-card reveal">
-        <img src="1759673280315-0199b4b2-ec49-7181-9af5-d841e91620b7.png" alt="Groundnut Oil 1000ml">
-        <h3>Unrefined • Heart-Healthy • Groundnut Oil 1000ml</h3>
-        <div class="price-rating">
-          <span class="price">₹270</span>
-          <a href="https://wa.me/918088103001?text=I want this Unrefined • Heart-Healthy • Mild Flavor 1000ml"
-            class="order-btn">Order Now</a>
+    <!-- Our Mission Section -->
+    <section id="mission" class="bg-secondary-brown/90 text-white py-16 sm:py-24">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">Our Mission</h2>
+            <p class="text-xl sm:text-2xl font-light leading-relaxed">
+                To deliver <span class="font-semibold text-accent-yellow">chemical-free, unrefined cooking oils</span> directly from farmers to families — ensuring health, taste, and trust in every home.
+            </p>
+            <i data-lucide="handshake" class="w-12 h-12 mt-8 text-accent-yellow mx-auto"></i>
         </div>
-      </div>
+    </section>
 
-      <div class="product-card reveal">
-        <img src="1759673280315-0199b4b2-ec49-7181-9af5-d841e91620b7.png" alt="Groundnut Oil 500ml">
-        <h3>Unrefined • Heart-Healthy • Groundnut Oil 500ml</h3>
-        <div class="price-rating">
-          <span class="price">₹140</span>
-          <a href="https://wa.me/918088103001?text=I want this Unrefined • Heart-Healthy • Mild Flavor 500ml"
-            class="order-btn">Order Now</a>
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="py-16 sm:py-24 lg:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-primary-green mb-16">
+                <i data-lucide="tree-palm" class="inline-block w-8 h-8 mr-3 align-text-bottom"></i>
+                Why Choose Moulika Coconest?
+            </h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1: Cold-Pressed -->
+                <div class="p-6 bg-bg-light rounded-xl shadow-lg border-l-4 border-primary-green">
+                    <div class="flex items-center mb-3">
+                        <i data-lucide="leaf" class="w-6 h-6 text-primary-green mr-3"></i>
+                        <h3 class="text-xl font-semibold text-gray-900">Cold-Pressed, Not Refined</h3>
+                    </div>
+                    <p class="text-gray-600">We use wooden Ghani methods to preserve natural nutrients, aroma, and flavor.</p>
+                </div>
+
+                <!-- Feature 2: No Preservatives -->
+                <div class="p-6 bg-bg-light rounded-xl shadow-lg border-l-4 border-primary-green">
+                    <div class="flex items-center mb-3">
+                        <i data-lucide="zap-off" class="w-6 h-6 text-primary-green mr-3"></i>
+                        <h3 class="text-xl font-semibold text-gray-900">No Preservatives or Additives</h3>
+                    </div>
+                    <p class="text-gray-600">Just pure oil, as nature intended. Free from chemicals, colors, and fragrances.</p>
+                </div>
+
+                <!-- Feature 3: Farm-Sourced -->
+                <div class="p-6 bg-bg-light rounded-xl shadow-lg border-l-4 border-primary-green">
+                    <div class="flex items-center mb-3">
+                        <i data-lucide="factory" class="w-6 h-6 text-primary-green mr-3"></i>
+                        <h3 class="text-xl font-semibold text-gray-900">Farm-Sourced Ingredients</h3>
+                    </div>
+                    <p class="text-gray-600">We work closely with farmers and small suppliers to ensure the highest raw quality.</p>
+                </div>
+
+                <!-- Feature 4: Lab-Tested -->
+                <div class="p-6 bg-bg-light rounded-xl shadow-lg border-l-4 border-primary-green">
+                    <div class="flex items-center mb-3">
+                        <i data-lucide="flask-conical" class="w-6 h-6 text-primary-green mr-3"></i>
+                        <h3 class="text-xl font-semibold text-gray-900">Lab-Tested Purity</h3>
+                    </div>
+                    <p class="text-gray-600">Every batch is rigorously tested for quality, purity, and safety standards.</p>
+                </div>
+
+                <!-- Feature 5: Eco-Friendly -->
+                <div class="p-6 bg-bg-light rounded-xl shadow-lg border-l-4 border-primary-green">
+                    <div class="flex items-center mb-3">
+                        <i data-lucide="recycle" class="w-6 h-6 text-primary-green mr-3"></i>
+                        <h3 class="text-xl font-semibold text-gray-900">Eco-Friendly & Honest</h3>
+                    </div>
+                    <p class="text-gray-600">Sustainability and transparency are core to our operations, from farm to bottle.</p>
+                </div>
+
+                <!-- Feature 6: Certified Purity -->
+                <div class="p-6 bg-bg-light rounded-xl shadow-lg border-l-4 border-primary-green">
+                    <div class="flex items-center mb-3">
+                        <i data-lucide="lock" class="w-6 h-6 text-primary-green mr-3"></i>
+                        <h3 class="text-xl font-semibold text-gray-900">Certified Purity</h3>
+                    </div>
+                    <p class="text-gray-600">You can trust what's in the bottle. Lab-tested and certified for your peace of mind.</p>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
 
-     
+    <!-- About Us Section -->
+    <section id="about-us" class="py-16 sm:py-24 lg:py-32 bg-secondary-brown/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-secondary-brown mb-12">
+                <i data-lucide="book-open-text" class="inline-block w-8 h-8 mr-3 align-text-bottom"></i>
+                About Us: From Nature to Your Kitchen
+            </h2>
+
+            <div class="max-w-3xl mx-auto text-center">
+                <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                    At <span class="font-bold text-primary-green">Moulika Coconest</span>, we believe in the power of purity. Inspired by traditional Indian methods, we bring you cold-pressed oils made the way nature intended – with no chemicals, no heat, and no shortcuts.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                    Our oils are <span class="font-bold text-primary-green">100% pure</span>, extracted using traditional wooden cold-press methods that retain the natural nutrients, aroma, and flavor of the ingredients. Every drop reflects our promise of quality, health, and honesty.
+                </p>
+                <p class="text-xl font-semibold text-secondary-brown italic">
+                    Our oils are not just products — they are a return to tradition, purity, and trust.
+                </p>
+            </div>
         </div>
-    </div>
-  </section>
+    </section>
 
-  <script src="script.js"></script>
+    <!-- Customer Testimonials Section -->
+    <section id="testimonials" class="py-16 sm:py-24 lg:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-primary-green mb-12">
+                <i data-lucide="messages-square" class="inline-block w-8 h-8 mr-3 align-text-bottom"></i>
+                Customer Testimonials
+            </h2>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg border-t-4 border-accent-yellow">
+                    <p class="text-xl italic text-gray-700 mb-4">“This coconut oil smells just like the fresh ones from my village. Loved it!”</p>
+                    <p class="font-semibold text-secondary-brown text-lg">– Lakshmi, Hyderabad</p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg border-t-4 border-accent-yellow">
+                    <p class="text-xl italic text-gray-700 mb-4">“My kids love the taste of food cooked with your groundnut oil. So fresh!”</p>
+                    <p class="font-semibold text-secondary-brown text-lg">– Vivek, Coimbatore</p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg border-t-4 border-accent-yellow">
+                    <p class="text-xl italic text-gray-700 mb-4">“Finally found an oil brand I can trust. No stickiness, no chemicals.”</p>
+                    <p class="font-semibold text-secondary-brown text-lg">– Rekha, Bangalore</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order & Delivery Info + FAQ & Contact -->
+    <section id="contact" class="bg-primary-green/90 text-white py-16 sm:py-24 lg:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12">
+
+            <!-- Column 1: Order & Delivery / Contact -->
+            <div>
+                <h3 class="text-3xl font-bold mb-8 text-accent-yellow">Order & Delivery Info</h3>
+                <ul class="space-y-4 text-lg mb-12">
+                    <li class="flex items-start">
+                        <i data-lucide="truck" class="w-6 h-6 flex-shrink-0 mr-3 mt-1 text-accent-yellow"></i>
+                        <span>Pan-India shipping & Fast dispatch</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-lucide="package" class="w-6 h-6 flex-shrink-0 mr-3 mt-1 text-accent-yellow"></i>
+                        <span>Secure packaging for zero leakage</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-lucide="credit-card" class="w-6 h-6 flex-shrink-0 mr-3 mt-1 text-accent-yellow"></i>
+                        <span>Cash on delivery & UPI accepted</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-lucide="messages-square" class="w-6 h-6 flex-shrink-0 mr-3 mt-1 text-accent-yellow"></i>
+                        <span>Quick support via WhatsApp for bulk & retail orders</span>
+                    </li>
+                </ul>
+
+                <h3 class="text-3xl font-bold mb-6 text-accent-yellow">Contact Us</h3>
+                <div class="space-y-4 text-lg">
+                    <p class="flex items-center">
+                        <i data-lucide="phone" class="w-6 h-6 flex-shrink-0 mr-3 text-accent-yellow"></i>
+                        <span class="font-semibold">Phone:</span> +91 8088103001
+                    </p>
+                    <p class="flex items-center">
+                        <i data-lucide="mail" class="w-6 h-6 flex-shrink-0 mr-3 text-accent-yellow"></i>
+                        <span class="font-semibold">Email:</span> moulikacoconest@gmail.com
+                    </p>
+                    <a href="https://wa.me/918088103001" target="_blank" class="flex items-center hover:underline">
+                        <i data-lucide="message-square-text" class="w-6 h-6 flex-shrink-0 mr-3 text-accent-yellow"></i>
+                        <span class="font-semibold">WhatsApp Orders:</span> Click to Chat
+                    </a>
+                </div>
+            </div>
+
+            <!-- Column 2: FAQ Section -->
+            <div>
+                <h3 class="text-3xl font-bold mb-8 text-accent-yellow">Frequently Asked Questions</h3>
+
+                <div class="space-y-6">
+                    <!-- FAQ 1 -->
+                    <div class="bg-primary-green p-5 rounded-xl shadow-lg">
+                        <h4 class="font-semibold text-xl mb-2 flex items-center">
+                            <i data-lucide="help-circle" class="w-5 h-5 mr-2 text-accent-yellow"></i>
+                            Q: Are your oils edible?
+                        </h4>
+                        <p class="text-base font-light">Yes! Our oils are cold-pressed and 100% safe for cooking, as well as for external use (hair/skin).</p>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="bg-primary-green p-5 rounded-xl shadow-lg">
+                        <h4 class="font-semibold text-xl mb-2 flex items-center">
+                            <i data-lucide="help-circle" class="w-5 h-5 mr-2 text-accent-yellow"></i>
+                            Q: How long is the shelf life?
+                        </h4>
+                        <p class="text-base font-light">Up to 6 months unopened. We recommend using it within 3 months after opening for maximum freshness.</p>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="bg-primary-green p-5 rounded-xl shadow-lg">
+                        <h4 class="font-semibold text-xl mb-2 flex items-center">
+                            <i data-lucide="help-circle" class="w-5 h-5 mr-2 text-accent-yellow"></i>
+                            Q: Do you add any fragrance or chemicals?
+                        </h4>
+                        <p class="text-base font-light">No – we use only raw, natural ingredients. No additives, no chemicals, and no artificial fragrance at all.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp Button (Visible on Mobile) -->
+    <a href="https://wa.me/918088103001" target="_blank" class="fixed bottom-6 right-6 z-50 p-4 rounded-full bg-primary-green text-white shadow-2xl hover:bg-green-700 transition duration-300 md:hidden" aria-label="Chat with us on WhatsApp">
+        <i data-lucide="message-square-text" class="w-8 h-8"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Footer Links -->
+            <div class="flex flex-wrap justify-center space-x-4 sm:space-x-8 mb-8 text-sm sm:text-base">
+                <a href="#about-us" class="hover:text-primary-green transition duration-150">About Us</a>
+                <a href="#products" class="hover:text-primary-green transition duration-150">Products</a>
+                <a href="#why-us" class="hover:text-primary-green transition duration-150">Why Choose Us</a>
+                <a href="#contact" class="hover:text-primary-green transition duration-150">FAQ</a>
+                <a href="#contact" class="hover:text-primary-green transition duration-150">Contact</a>
+            </div>
+            <div class="flex flex-wrap justify-center space-x-4 sm:space-x-8 mb-8 text-sm sm:text-base">
+                <a href="#" class="hover:text-primary-green transition duration-150">Privacy Policy</a>
+                <a href="#" class="hover:text-primary-green transition duration-150">Shipping & Return Policy</a>
+            </div>
+            
+            <!-- Copyright and Social -->
+            <div class="text-center text-gray-400 text-sm border-t border-gray-700 pt-6">
+                <p>&copy; 2025 Moulika Coconest. All rights reserved. | Phone: +91 8088103001</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+    </script>
 </body>
 </html>
-
-
